@@ -32,6 +32,7 @@ permalink: /thumbs.php?cat=99999.html
 	  ga('send', 'pageview');
 
 	</script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
 
 	<body>
@@ -50,39 +51,39 @@ permalink: /thumbs.php?cat=99999.html
 <p>35 Yip Kan Street, Hong Kong</p>
 <p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3692.7608986943537!2d114.165646!3d22.24914895!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040018c4f13a6f%3A0x1cdac9defa5d0faa!2sKingley+Industrial+Bldg!5e0!3m2!1sen!2suk!4v1396366111970" width="600" height="450" frameborder="0" style="border:0"></iframe></p></p>
 
+<!--
+<input type="hidden" name="_to" value="fordhame@googlemail.com">
+            <input type="hidden" name="_cc" value="a.ward@eyedivision.com">
+-->
 <form action="/thanks/" method="post" id="contact-form">
 
       <fieldset>
 
-            <input type="hidden" name="_to" value="fordhame@googlemail.com">
-            <input type="hidden" name="_cc" value="a.ward@eyedivision.com">
-            <input type="hidden" name="_subject" value="Web form">
-            <p>
-            <label for="name">Name:</label>
-            <input type="text" name="name">
-            </p>
-            <p>
-            <label for="_replyto">Email:</label>
-            <input type="text" name="_replyto">
-            </p>
-            <p>
-            <label>Message</label>
-            <textarea name="message"></textarea>
-            </p>
-            {% if site.recaptcha_site_key %}
-            <div class="g-recaptcha" data-sitekey="{{ site.recaptcha_site_key }}"></div>
-            {% endif %}
+        <input type="hidden" name="_to" value="a.ward@eyedivision.com">
+        <input type="hidden" name="_subject" value="Web form">
         <p>
-            <input type="submit" value="Send message">
-            </p>
+        <label for="name">Name:</label>
+        <input type="text" name="name">
+        </p>
+        <p>
+        <label for="_replyto">Email:</label>
+        <input type="text" name="_replyto">
+        </p>
+        <p>
+        <label>Message</label>
+        <textarea name="message"></textarea>
+        </p>
+        {% if site.recaptcha_site_key %}
+        	<div class="g-recaptcha" data-sitekey="{{ site.recaptcha_site_key }}"></div>
+        {% endif %}
+        <p>
+          <input type="submit" value="Send message">
+        </p>
       </fieldset>
 
       </form>
 
       </div>
-
-
-
 
 		<div id="credits">&copy; All work is copyright the artist, no reproduction without permission.<br /><a href="http://www.eyedivision.com" title="An Eye Gallery system site" target="_blank"><img src="images/eyegallery.gif" alt="an Eye Gallery site" width="30" height="31" /></a><br />
 	An <a href="http://www.eyedivision.com" title="Site by Eye Division" target="_blank">Eye Gallery</a> site</div>
